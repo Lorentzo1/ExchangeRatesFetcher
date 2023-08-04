@@ -12,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IExchangeRateService, ExchangeRateService>();
+builder.Services.AddHostedService<ScopedBackgroundService>();
 builder.Services.AddMemoryCache();
 builder.Services.Configure<AddressOptions>(builder.Configuration.GetSection(AddressOptions.Address));
 builder.Services.AddHttpClient<IExchangeRateService, ExchangeRateService>();

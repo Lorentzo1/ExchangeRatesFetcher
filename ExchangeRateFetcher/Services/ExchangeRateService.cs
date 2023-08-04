@@ -23,7 +23,7 @@ namespace ExchangeRateWebApi.Services
             this.memoryCache = memoryCache;
         }
 
-        public async Task<IEnumerable<ExchangeRate>> MapDataToExchangeRatesAsync()
+        public async Task<IEnumerable<ExchangeRate>> GetDataAsync()
         {
             try
             {
