@@ -4,6 +4,6 @@ namespace ExchangeRateWebApi.Services
 {
     public interface IExchangeRateService
     {
-        Task<IEnumerable<ExchangeRate>> GetDataAsync();
+        Task<IEnumerable<ExchangeRate>> GetExchangeRateAsync();
     }
 }

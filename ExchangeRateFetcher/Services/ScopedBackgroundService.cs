@@ -26,7 +26,7 @@
                         IExchangeRateService scopedProcessingService =
                             scope.ServiceProvider.GetRequiredService<IExchangeRateService>();
 
-                        await scopedProcessingService.GetDataAsync();
+                        await scopedProcessingService.GetExchangeRateAsync();
                     }
                 }
             }

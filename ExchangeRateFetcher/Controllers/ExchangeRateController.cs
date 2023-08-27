@@ -18,7 +18,7 @@ namespace ExchangeRateWebApi.Controllers
         [HttpGet]
         public async Task<IEnumerable<ExchangeRate>> GetExchangeRates()
         {
-            return await exchangeRate.GetDataAsync();
+            return await exchangeRate.GetExchangeRateAsync();
         }
     }
 
