@@ -6,6 +6,6 @@ ExchangeRatesFetcher is a small WebApi C# project utilizing web scraping. It can
 Web scraping is achieved by use of HtmlAgilityPack library\
 Url for http client is loaded through Option pattern\
 In-memory cache is used to improve performance and in order to store data in intermediate- layer\
-Background Service is used to refresh the cache and keeping the data up to date.\
+Background Service is used to refresh the cache and keeping the data up to date
 
 
