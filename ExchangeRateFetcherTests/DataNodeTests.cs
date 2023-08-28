@@ -81,7 +81,7 @@ namespace ExchangeRateFetcherTest
             catch (Exception ex)
             {
                 //Assert
-                Assert.AreEqual("Value cannot be null.", ex.Message);
+                Assert.AreEqual("String is null or empty", ex.Message);
             }
         }
 

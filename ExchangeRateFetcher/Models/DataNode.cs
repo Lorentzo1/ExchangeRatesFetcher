@@ -32,16 +32,14 @@ namespace ExchangeRateWebApi.Models
                 exchangeRate = exchangeRate / 100;
             }
 
-#pragma warning disable CS8601 // Possible null reference assignment.
-            CountryName = childNodes[0]?.InnerText == string.Empty ? null : childNodes[0]?.InnerText;
-            CurrencyName = childNodes[1]?.InnerText == string.Empty ? null : childNodes[1]?.InnerText;
+            CountryName = childNodes[0]?.InnerText!;
+            CurrencyName = childNodes[1]?.InnerText!;
             OneCrown = crown;
-            IsoCode = childNodes[3]?.InnerText == string.Empty ? null : childNodes[3]?.InnerText;
+            IsoCode = childNodes[3]?.InnerText!;
             ExchangeRate = exchangeRate;
-#pragma warning restore CS8601 // Possible null reference assignment.
-            if (CountryName is null || CurrencyName is null || IsoCode is null)
+            if (string.IsNullOrEmpty(CountryName) || string.IsNullOrEmpty(CurrencyName) || string.IsNullOrEmpty(IsoCode))
             {
-                throw new ArgumentNullException();
+                throw new ArgumentException("String is null or empty");
             }
         }
     }

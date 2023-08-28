@@ -50,8 +50,8 @@ namespace ExchangeRateWebApi.Services
 
                     var htmlDoc = new HtmlDocument();
                     htmlDoc.LoadHtml(content);
-                    var first = htmlDoc.DocumentNode.SelectNodes("//div/table/tbody").First();
-                    var dataNodes = first.ChildNodes.Where(x => x.Name == "tr").ToList();
+                    var firstTableNode = htmlDoc.DocumentNode.SelectNodes("//div/table/tbody").First();
+                    var dataNodes = firstTableNode.ChildNodes.Where(x => x.Name == "tr").ToList();
                     cacheValue = dataNodes.Select(x => new DataNode(x)).ToList();
 
                     //cache
